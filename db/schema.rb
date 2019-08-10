@@ -16,7 +16,8 @@ ActiveRecord::Schema.define(version: 2019_08_08_114105) do
   enable_extension "plpgsql"
 
   create_table "scorecards", force: :cascade do |t|
-    t.date "date" # dd/mm/year
+    t.string "coursename"
+    t.date "date"
     t.integer "frontnine"
     t.integer "backnine"
     t.integer "combined"

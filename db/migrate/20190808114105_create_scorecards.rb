@@ -1,6 +1,7 @@
 class CreateScorecards < ActiveRecord::Migration[6.0]
   def change
     create_table :scorecards do |t|
+      t.string :coursename
       t.date :date
       t.integer :frontnine
       t.integer :backnine

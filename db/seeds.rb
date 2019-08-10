@@ -8,16 +8,35 @@
 
 
 
-User.create({
-    name: 'TestName1',
-    username: 'testuser1',
-    password_digest: 'password1',
-    age: 10,
-    handicap: 15,
-    status: 'Amateur'
-})
+User.create([
+    {
+        name: 'TestName1',
+        username: 'testuser1',
+        password_digest: 'password1',
+        age: 10,
+        handicap: 15,
+        status: 'Amateur'
+    },
+    {
+        name: 'TestName2',
+        username: 'testuser2',
+        password_digest: 'password2',
+        age: 30,
+        handicap: 8,
+        status: 'Amateur'
+    },
+    {
+        name: 'TestName3',
+        username: 'testuser3',
+        password_digest: 'password3',
+        age: 28,
+        handicap: -4,
+        status: 'Professional'
+    }
+])
 Scorecard.create([
     {
+        coursename: "Johnson CC",
         date: '12/1/2018', # dd/mm/year
         frontnine: 46,
         backnine: 40,
@@ -25,7 +44,8 @@ Scorecard.create([
         par: 72,
         user_id: 1
     },
-    {
+    {   
+        coursename: "Riviera CC",
         date: '12/3/2018',
         frontnine: 43,
         backnine: 45,
