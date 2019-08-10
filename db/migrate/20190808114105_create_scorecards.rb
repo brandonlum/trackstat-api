@@ -6,6 +6,7 @@ class CreateScorecards < ActiveRecord::Migration[6.0]
       t.integer :backnine
       t.integer :combined
       t.integer :par
+      t.integer :user_id
 
       t.timestamps
     end
