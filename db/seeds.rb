@@ -36,21 +36,25 @@ User.create([
 ])
 Scorecard.create([
     {
-        coursename: "Johnson CC",
-        date: '12/1/2018', # dd/mm/year
-        frontnine: 46,
-        backnine: 40,
-        combined: 86,
-        par: 72,
+        course_name: "Johnson CC",
+        date_played: '12/1/2018', # dd/mm/year
+        front_nine_score: 46,
+        back_nine_score: 40,
+        combined_score: 86,
+        front_par: 36,
+        back_par: 36,
+        total_par: 72,
         user_id: 1
     },
     {   
-        coursename: "Riviera CC",
-        date: '12/3/2018',
-        frontnine: 43,
-        backnine: 45,
-        combined: 88,
-        par: 72,
+        course_name: "Riviera CC",
+        date_played: '12/3/2018',
+        front_nine_score: 43,
+        back_nine_score: 45,
+        combined_score: 88,
+        front_par: 35,
+        back_par: 37,
+        total_par: 72,
         user_id: 1
     }
 ])

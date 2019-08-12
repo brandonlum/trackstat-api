@@ -16,12 +16,14 @@ ActiveRecord::Schema.define(version: 2019_08_08_114105) do
   enable_extension "plpgsql"
 
   create_table "scorecards", force: :cascade do |t|
-    t.string "coursename"
-    t.date "date"
-    t.integer "frontnine"
-    t.integer "backnine"
-    t.integer "combined"
-    t.integer "par"
+    t.string "course_name"
+    t.date "date_played"
+    t.integer "front_nine_score"
+    t.integer "back_nine_score"
+    t.integer "combined_score"
+    t.integer "front_par"
+    t.integer "back_par"
+    t.integer "total_par"
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
