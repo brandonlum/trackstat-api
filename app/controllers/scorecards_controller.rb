@@ -46,6 +46,7 @@ class ScorecardsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def scorecard_params
-      params.require(:scorecard).permit(:date, :frontnine, :backnine, :combined, :par)
+      params.require(:scorecard).permit(:course_name, :date_played, :front_nine_score, :back_nine_score, :combined_score, :front_par, :back_par, :total_par)
     end
 end
+
