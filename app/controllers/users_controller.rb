@@ -5,7 +5,6 @@ class UsersController < ApplicationController
 
   # Login
   def login
-    p "test"
     user = User.find_by(username: params[:user][:username])
     if user && user.authenticate(params[:user][:password])
       token = create_token(user.id, user.username)
