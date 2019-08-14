@@ -9,10 +9,14 @@ class ApplicationController < ActionController::API
     def bearer_token
         puts "BEARER TOKEN"
         puts header = request.env["HTTP_AUTHORIZATION"]
-        puts header.gsub(pattern, '') if header && header.match(pattern)
+
 
         header = request.env["HTTP_AUTHORIZATION"]
         pattern = /^Bearer /
+
+        puts header.gsub(pattern, '') if header && header.match(pattern)
+
+        
         header.gsub(pattern, '') if header && header.match(pattern)
     end
 
