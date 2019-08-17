@@ -12,7 +12,15 @@ class ScorecardsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create scorecard" do
     assert_difference('Scorecard.count') do
-      post scorecards_url, params: { scorecard: { backnine: @scorecard.backnine, combined: @scorecard.combined, date: @scorecard.date, frontnine: @scorecard.frontnine, par: @scorecard.par } }, as: :json
+      post scorecards_url, params: { scorecard: { course_name: @scorecard.course_name,
+      date_played: @scorecard.date_played,
+      front_nine_score: @scorecard.front_nine_score,
+      back_nine_score: @scorecard.back_nine_score,
+      combined_score: @scorecard.combined_score,
+      front_par: @scorecard.front_par,
+      back_par: @scorecard.back_par,
+      total_par: @scorecard.total_par,
+      user_id: @scorecard.user_id} }, as: :json
     end
 
     assert_response 201
@@ -24,7 +32,15 @@ class ScorecardsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update scorecard" do
-    patch scorecard_url(@scorecard), params: { scorecard: { backnine: @scorecard.backnine, combined: @scorecard.combined, date: @scorecard.date, frontnine: @scorecard.frontnine, par: @scorecard.par } }, as: :json
+    patch scorecard_url(@scorecard), params: { scorecard: { course_name: @scorecard.course_name,
+    date_played: @scorecard.date_played,
+    front_nine_score: @scorecard.front_nine_score,
+    back_nine_score: @scorecard.back_nine_score,
+    combined_score: @scorecard.combined_score,
+    front_par: @scorecard.front_par,
+    back_par: @scorecard.back_par,
+    total_par: @scorecard.total_par,
+    user_id: @scorecard.user_id } }, as: :json
     assert_response 200
   end
 
