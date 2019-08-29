@@ -7,7 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins ['localhost:3001', 'https://brandonlum.github.io/trackstat-client', 'https://brandonlum.github.io']
+    origins ['localhost:3001', 'https://brandonlum.github.io/trackstat', 'https://brandonlum.github.io']
 
     resource '*',
       headers: :any,
